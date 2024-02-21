@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Animacion navBar</title>
+     <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="container mx-auto mt-5">
+     <nav class="flex items-center justify-between flex-wrap bg-slate-900 p-6">
+          <div class="flex items-center ml-1">
+               <svg viewBox="0 0 1024 1024" class="fill-current h-8 w-8 mr-2" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M512 960c-92.8 0-160-200-160-448S419.2 64 512 64s160 200 160 448-67.2 448-160 448z m0-32c65.6 0 128-185.6 128-416S577.6 96 512 96s-128 185.6-128 416 62.4 416 128 416z" fill="#ffffff"></path><path d="M124.8 736c-48-80 92.8-238.4 307.2-363.2S852.8 208 899.2 288 806.4 526.4 592 651.2 171.2 816 124.8 736z m27.2-16c33.6 57.6 225.6 17.6 424-97.6S905.6 361.6 872 304 646.4 286.4 448 401.6 118.4 662.4 152 720z" fill="#ffffff"></path><path d="M899.2 736c-46.4 80-254.4 38.4-467.2-84.8S76.8 368 124.8 288s254.4-38.4 467.2 84.8S947.2 656 899.2 736z m-27.2-16c33.6-57.6-97.6-203.2-296-318.4S184 246.4 152 304 249.6 507.2 448 622.4s392 155.2 424 97.6z" fill="#ffffff"></path><path d="M512 592c-44.8 0-80-35.2-80-80s35.2-80 80-80 80 35.2 80 80-35.2 80-80 80zM272 312c-27.2 0-48-20.8-48-48s20.8-48 48-48 48 20.8 48 48-20.8 48-48 48zM416 880c-27.2 0-48-20.8-48-48s20.8-48 48-48 48 20.8 48 48-20.8 48-48 48z m448-432c-27.2 0-48-20.8-48-48s20.8-48 48-48 48 20.8 48 48-20.8 48-48 48z" fill="#2F4BFF"></path></g></svg>
+               <!-- Al lado del logo poner un span -->
+               <span class="font-semibold text-xl tracking-tight text-white">Tailwind CSS</span><!-- flex items-center es para lo de align -->
+          </div>
+          <div class="block lg:hidden" id="botonsiu">
+               <button id='boton' class="flex items-center px-3 py-2 border rounded hover:text-white hover:border-white">
+                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Menu</title><path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+               </button>
+             </div><!-- EL GROW ES PARA LLENAR CUALQUIER ESPACIO y para que no crezca grow-0 -->
+             <!-- PARA BLOCK ES TEXT CENTER, PARA INLINE METER DENTRO DE UN DIV Y TEXT CENTER EN LA CLASE DEL DIV NO EN EL ELEMENTO PARA FLEX JUSTIFY CENTER -->
+             <!-- Y PARA FLEX COL IR AL ELEMENTO HIJO Y MOVER EL ML O MR COMO SE GUSTE -->
+             <!-- FLEX WRAP ES PARA PONER EN COLUMNAS CUANDO SE ENCOJE, EL GROW ES QUE ESE ELEMENTO EN ESPECIFICO PADRE: FLEX HIJO:GROW USE TODA LA PANTALLA -->
+             <!-- EL BLOCK SIEMPRE ES A LOS HIJOS -->
+             <!-- SRHINK EN FLEX ES PARA ENCOJER ELEMENTOS Y SE LE PONE A LOS HIJOS INDIVIDUALMENTE --> <!-- GAP ES PARA GRID Y MARGIN PARA ELEENTOS EN FLEX -->
+             <!-- W FULL HACE QUE OCUPEN TODO SU PROPIO ESPACIO -->
+             <!-- REPASAR BORDE CON EL COLOR DEL MENU -->
+          <div id="menu" class="font-Robo font-light hidden text-center lg:flex lg:justify-evenly w-full  flex-grow lg:w-auto lg:items-center">
+               <div class="lg:flex lg:w-full lg:justify-center gap-x-10">
+                    <a href="#" class="hover:border-b-2 hover:border-gray-600 border-b-2 border-slate-900 transition ease-out duration-400
+                    mt-4 block lg:mt-0 text-green-300 hover:text-white mx-2">Documentos</a>
+                    <a href="#" class="hover:border-b-2 hover:border-gray-600 border-b-2 border-slate-900
+                    mt-4 block lg:mt-0 text-green-300 hover:text-white mx-2">Ejemplos</a>
+                    <a href="#" class="hover:border-b-2 hover:border-gray-600 border-b-2 border-slate-900
+                    mt-4 block lg:mt-0 text-green-300 hover:text-white mx-1">Blog</a>
+               </div>
+               <a href="#">
+                    <button class=" transition ease-in duration-100 mr-2 text-sm my-2 px-4 py-2 leading-none border rounded
+                    text-white border-white hover:border-transparent
+                    hover:bg-white hover:text-black">Descargar</button>
+               </a>
+               <!-- Cuando esta en flex, si se pone un elemento afuera del div de las divisiones PRIMARIAS, este se ira hacia el otro lado -->
+               <!-- flex flex-wrap content---PA TRABAJAR CON CONTENT -->
+               <!-- ELEMENTOS HIJOS ALIGN-SELF  PONER ITEMS START ARRIBA Y SELF END POR APARTRE-->
+               <!-- FLEX 1 INDIVIDUAL USA TODO EL ANCHO DISPONIBLE --> 
+          </div>
+     </nav>
+     <script>
+          const menusito = document.getElementById("menu");
+          const botonAccion = document.getElementById("botonsiu");
+     
+          /* CUANDO SE REALICE UNA ACCION ES EL CONST.EVENTO,FUNCION */
+          /* .toggle("hidden") es un método que pertenece a la propiedad classList. 
+          Este método permite agregar una clase si no está presente y quitarla si ya está. En este caso, se está utilizando para alternar la clase "hidden" en el elemento "menusito". */
+          botonAccion.addEventListener("click", ()=>{
+               menusito.classList.toggle("hidden");
+          });
+        </script>
+</body>
+</html>

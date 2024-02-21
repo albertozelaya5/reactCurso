@@ -1,0 +1,11 @@
+Instalar yarn
+-yarn create vite
+cd app
+yarn
+yarn dev
+
+npx create-react-app nombre-app
+npm start
+npm run build
+npm test
+npm run eject

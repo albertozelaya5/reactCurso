@@ -1,0 +1,14 @@
+GIT Y GITHUB
+--------------------CMD----------------------------
+help
+dir ---ir a los directorios
+
+cd y el directorio -----cd desktop
+cd ..    Es para volver hacia atras
+
+se arrastra hacia el directorio la carpeta y luego enter
+o en explorer barra de direcciones poner cmd
+dir -----------es para ir a los directorios dentro
+md -------------es para hacer una carpeta dentro, md nombre
+mkdir ------------es para crear la carpeta y da la info de a que hora se creo
+move app.js carpeta-dos ------------move nombreApp destinoCarpeta

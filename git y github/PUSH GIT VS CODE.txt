@@ -1,0 +1,76 @@
+npm run dev   ---------PARA EJECUTAR EL PUERTO COMO UN SERVER git help 
+--------NODE MODULES npm install--------------
+.gitignore y el gitattributes.txt para que se interprete tipo texto>* text=auto
+
+*.jpg binary
+*png binary
+*svg binary
+
+
+INSTALAR GIT OBVIO
+-----------------GUIA DE GIT Y GITHUB-----AL BORRAR "" SE MIRAN LOS DATOS PUESTOS----------
+git version , git config --global user.name "nombreNoCorreo" , git config --global user.email "emailgithub@uwu"
+
+//INICIAR UN NUEVO REPOSITORIO, CREAR LA CARPETA OCULTA -GIT, UNA VEZ POR REPOSITORIO
+git init
+
+--------------VER QUE ARCHIVOS NO HAN SIDO REGISTRADOS----------, para modificados -s
+git status, git status -s
+
+----------AGREGAR ARECHIVOS INDEX----------, SI SALE A EN EL git status -s = YA SE ANADIO
+git add index.html, "git add ." pa mandarlos al area temporal todos los archivos
+
+----COMMIT PARA ANADIR AL REPOSITORIO LOCAL, M ES MENSAJE, SE ANADE CON EL ADD Y LUEGO SE MANDA----
+
+git commit -m "agregamos el index.html", para varios es lo mismo, no poner tildes ni nada
+
+-----CUANDO SE MODIFIQUE UN ARCHIVO, EJ INDEX VA A APARECER UNA M DE MODIFICADO, SIEMPRE TIENEN QUE PASAR POR EL AREA TEMPORAL ANTES DE IR AL REPOSITORIO-------------
+---------CUANDO SE VUELVA A GUARDAR EN EL REPO------------
+
+"git add ." y luego el commit con el mensaje "git commit -m "uwu""
+-----------PARA CREAR POR PRIMERA VEZ-------------
+echo "# travelBlogExamen" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git branch -M main
+  git remote add origin https://github.com/albertozelaya5/travelBlogExamen.git
+  git push -u origin main
+
+-----------PARA MOSTRAR LA LINEA DE COMMITS, VIAJAR A LOS COMMITS---------
+
+git log --oneline, git reset --hard aewadsd<-identificador--PARA VIAJAR AL TIEMPO DE ESE CAMBIO
+----------LUEGO AL VOLVER A ESCRIBIR EL ONELINE NOS MUEASTRA EN LOS QUE NO ESTAMOS
+---------PARA VOLVER A LOS CAMBIOS YA HECHOS--------
+git reset --hard idcambioanterior1
+
+------LUEGO DE HACER TODOS LOS COMMIT---------
+git push -u origin master
+-------------SIEMPRE PARA CUALQUIER CAMBIO, STATUS S, ADD Y COMMIT Y AL FINAL "git push"
+------------LUEGO REGISTRAR UN CORREO PARA SUBIRLO -------
+git config --global user.email "email@email.com", git config --global user.email PARA VER EL CORREO
+-------------HACER UN REPOSITORIO---------
+git remote add origin https://github.com/albertozelaya5/CrudMongoDB.git
+git branch -M main
+git push -u origin main
+
+---------SI EL REPOSITORIO SE INICIALIZO CON README--------
+git pull origin main --allow-unrelated-histories
+Y LUEGO PONER EL ANTERIOR FINAL--------git push -u origin main
+
+--------SI ALGO SE EDITA APARECERA M EN VSCODE---------- ------PARA CAMBIOAR EL ENLACE git remote set-url origin https:enlace.git------------- git remote -v PA VERIFICAR
+git add. , git commit -m "mensaje", git push -u origin main
+git log --oneline(SE MIRAN TODAS LAS VERSIONES DEL PROYECTO CON ESTE COMANDO) 
+
+------------NOMENCLATURA DE LETRAS---------
+A: addition of a file
+D: deletion of a file
+U: file is unmerged (you must complete the merge before it can be committed)
+C: copy of a file into a new one
+D: deletion of a file
+M: modification of the contents or mode of a file
+R: renaming of a file
+T: change in the type of the file
+X: "unknown" change type (most probably a bug, please report it)
+
+git config --global core.autocrlf true
