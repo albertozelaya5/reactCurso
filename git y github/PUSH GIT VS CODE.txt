@@ -6,6 +6,16 @@ npm run dev   ---------PARA EJECUTAR EL PUERTO COMO UN SERVER git help
 *png binary
 *svg binary
 
+----------CUANDO ESTAS EN COMPU NUEVA U OTRA----
+----QUE NO SEA LA ORIGINAL EN LA QUE HICISTE EL REP----
+loguearse en vscode con github, dar autorizacion
+crear una nueva carpeta para clonar el REPOSITORIO
+ubicarse en el terminal, gh auth login
+HTTPS, copiar codigo y autenticar
+Luego git repo clone userName/repoName
+-----El enlace del repo en Github cli
+
+
 
 INSTALAR GIT OBVIO
 -----------------GUIA DE GIT Y GITHUB-----AL BORRAR "" SE MIRAN LOS DATOS PUESTOS----------

@@ -1,0 +1,39 @@
+import React from 'react'
+import PropTypes from 'prop-types'; //SE IMPORTA LIBRERIA PROPTYPES
+//LUEGO ESTE COMPONENTE SE VA A EXPORTAR AL main.jsx
+
+const CounterApp = ({value}) => { //EL PROP DENTRO DE LA ARROW function
+//SIEMPRE DENTRO DE {} PORQUE ES JS
+  return (
+    //<></> ELEMENTOS DENTRO DEL RETURN
+    <>
+        <h1>CounterApp</h1>
+        <h2> { value } </h2> //EL VALOR DENTRO DEL HTML
+    </>
+  )
+}
+
+--------FUNCIONES EN UpperCamelCase---------
+--------PROPIEDADES EN camelCase----------
+
+//PROPIEDAD DE PROPS PARA ESPECIFICAR EL TIPO DE VALOR DEL PROP
+CounterApp.propTypes = {
+    value: PropTypes.number
+}
+
+//VALIDACION EN CASO ESTE VACIO EN EL MAIN
+//O NO SE HAYA DEFINIDO EL PROP TIPO//
+
+CounterApp.defaultProps = {
+    value: 'Ni modo pa'
+}
+
+export default CounterApp
+
+//EN EL main.jsx
+//SE IMPORTA EL CounterApp
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <CounterApp value={31415926535} />
+  </React.StrictMode>
+);

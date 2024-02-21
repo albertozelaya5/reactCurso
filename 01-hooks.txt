@@ -1,0 +1,33 @@
+import React from 'react'
+import PropTypes from 'prop-types';
+import { useState } from 'react'; //HOOK USESTATE
+//SE IMPORTA EL USESTATE PARA LOS HOOKS
+------LOS HOOKS SON BASICAMENTE FUNCIONES YA HECHAS----
+
+const CounterApp = ({value}) => {
+
+    //PRIMERO SE PONE EL VALUE QUE SE PONDRA EN EL MAIN
+    //EN LA ARROW FUNCTION, LUEGO SE HACE UN const 
+    CON COUNTER, Y SET COUNTER, IGUAL AL USESTATE QUE TENDRA EL 
+    VALOR DEL main
+
+    const [ counter, setCounter ] = useState(value)
+
+    //ARROW FUNCTION CON setCounter((c) =>c+1)
+    const handleAdd = () => {
+      //setCounter( counter +1 );
+      setCounter((c) =>c+1)// la c tiene el valor del counter
+    }
+
+  return (
+    <>
+        <h1>CounterApp</h1>
+        <h2> { counter } </h2>
+        <button onClick={ handleAdd }>{/* ASI ES CUANDO SE MANDA 
+        EL VALOR SOLO */}
+            +1
+        </button>
+        {/* (event)=> handleAdd(event) */}
+    </>
+  )
+}
