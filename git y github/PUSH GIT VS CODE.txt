@@ -37,7 +37,7 @@ git commit -m "agregamos el index.html", para varios es lo mismo, no poner tilde
 -----CUANDO SE MODIFIQUE UN ARCHIVO, EJ INDEX VA A APARECER UNA M DE MODIFICADO, SIEMPRE TIENEN QUE PASAR POR EL AREA TEMPORAL ANTES DE IR AL REPOSITORIO-------------
 ---------CUANDO SE VUELVA A GUARDAR EN EL REPO------------
 
-"git add ." y luego el commit con el mensaje "git commit -m "uwu""
+"git add ." y luego el commit con el mensaje "git commit -m "uwu"", git push -u origin main
 -----------PARA CREAR POR PRIMERA VEZ-------------
 echo "# travelBlogExamen" >> README.md
   git init

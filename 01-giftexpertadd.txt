@@ -1,0 +1,36 @@
+import React, { useState } from "react";
+
+export const GiftExpertrApp = () => {
+  const [categories, setCategories] = useState(["One Punch", "Dragon Ball"]);
+
+    //PARA ANADIR CATEGORIAS A UNA YA EXISTENTE
+    //EN EL EVENTO ONCLICK CUANDO SE PRESIONE EL BOTON
+    //IR A UIN HOOK NUEVO, ARROW FUNCTION Y DENTRO setCategories
+    //setCategories ES EL QUE ANADE UNA NUEVA
+    //DENTRO DE LLAVES [...categories, nuevaCategoria];
+  const onAddCategory = () => {
+    setCategories([...categories, 'bleach']);
+  };
+  return (
+    <>
+      {/* Titulo */}
+      <h1>GiftExpertApp</h1>
+
+      {/* Imput */}
+
+      {/* Listado de Gif */}
+      <button onClick={onAddCategory}>Agregar</button>
+      <ol>
+        {/* Que por cada categoria de categories, un li que se mande... */}
+        {/* El id del categorie en singular, para recorrer 1by1 lo que hace map */}
+        {categories.map((category) => {
+          return <li key={category}>{category}</li>;
+        })}
+        <li>123</li>
+        <li>ABC</li>
+        <li>XYZ</li>
+      </ol>
+      {/* Gif item */}
+    </>
+  );
+};
