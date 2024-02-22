@@ -1,21 +1,34 @@
-import { useState } from "react";
+import { useState } from "react"
 
-export const AddCategory = () => {
-  const [imputValue, setImputValue] = useState("One Punch");
 
-  const onImputChange = (event) => {
-    setImputValue(event.target.value);
-  };
+export const AddCategory = ({ NewCategory }) => {
 
-  return (
-    /* El <></> se usa cuando hay mas de un elemento */
-    <form>
-      <input
+  const [inputValue, setInputValue] = useState('')
+
+  const onInputChange = ({target}) =>{
+    setInputValue(target.value);
+  }
+
+  const onSubmit = ( eventito ) =>{
+    eventito.preventDefault(); //para que no se reinicie
+    if(inputValue.trim().length <= 1) return;
+
+    //setCategories((categories) => [inputValue, ...categories]);
+    NewCategory( inputValue.trim() );
+    setInputValue('');
+  }
+
+  return(
+    /* El evento onSubmit es a la hroa de hacer enter */
+    <form onSubmit={onSubmit}> {/* El form siempre se reinicia */}
+      <input 
         type="text"
-        placeholder="Buscar gifs"
-        value={imputValue}
-        onChange={onImputChange}
-      />
+        placeholder = "Buscar gifs"
+        value={ inputValue }
+        onChange={ onInputChange }
+        //onClick={inicioInput}
+       />
     </form>
-  );
+      
+  )
 };
