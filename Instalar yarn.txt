@@ -5,6 +5,10 @@ yarn
 yarn dev
 import PropTypes from 'prop-types';
 yarn add prop-types
+yarn build
+
+----EN EL TERMINAL--------
+-----PARA PRODUCCION, cd dist, http-server -o ----
 <FirstApp title="123 no" subtitle={31415} />
 -----EN LAS PROPS string es "" y float {1212}
 

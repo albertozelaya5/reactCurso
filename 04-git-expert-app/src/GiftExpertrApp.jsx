@@ -1,41 +1,31 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
+import { GiftGrid } from "./components/GiftGrid";
 
 export const GiftExpertrApp = () => {
-  const [categories, setCategories] = useState(["One Punch", "Dragon Ball"]);
+  const [categories, setCategories] = useState(["One Punch"]);
 
   const onAddCategory = (NewCategory) => {
 
-    if( categories.includes(NewCategory) ) return;
-    //console.log(NewCategory);
+    if (categories.includes(NewCategory)) return;
+    
     setCategories([NewCategory, ...categories]);
   };
 
   return (
     <>
-      {/* Titulo */}
+
       <h1>GiftExpertApp</h1>
 
-      {/* Imput */}
-      <AddCategory 
-      //setCategories = { setCategories }
-        NewCategory = {onAddCategory}
-      />{/* Que este prop se exporte */}
+      <AddCategory NewCategory={onAddCategory} />
+      
 
-      {/* Listado de Gif */}
-      {/* <button onClick={onAddCategory}>Agregar</button> */}
-      <ol>
-        {/* Que por cada categoria de categories, un li que se mande... */}
-        {/* El id del categorie en singular, para recorrer 1by1 lo que hace map */}
-        {
-          categories.map((category) => {
-            return <li key={category}>{category}</li>;
-          })
-        }
-        <li>123</li>
-        <li>ABC</li>
-        <li>XYZ</li>
-      </ol>
+      {categories.map( (category) => 
+        <GiftGrid 
+        key={category} 
+        category={ category } />
+      )}
+
       {/* Gif item */}
     </>
   );

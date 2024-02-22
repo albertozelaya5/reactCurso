@@ -1,0 +1,62 @@
+//PASO 2, CREACION DE COMPONENTES, ESTE ES EL COMPONENTE GLOBAL
+//no es necesario importar libreria de react en los componentes
+//rafc para creacion de componente basico
+
+import { useState } from "react" //primera libreria a usar, usestate
+//usada para hacer un contador, en este caso de texto
+//mientras se escribe en el rafc dentro de la arrow function poner tab
+//luego ir al snippet para setearlo
+import { AddCategory } from "./src/components/AddCategory"
+//usado para, una vez extraida la info de la pagina de gifs en un array,
+//returnar un form>input para agregar un valor a la pagina ademas de OPM
+//FUNCIONES FUTURAS: buscar  gifs
+//Una vez dado enter al imput, poner el valor
+
+
+export const GiftExperto = () => {
+
+    //usar camelCase y UpperCamelCase, 2 para archivos y 1 para 
+    //parametros o componentes
+    //useState(['Corchetes para lista', 'pueden ser varios'])
+
+    const [categories, setCategories] = useState(['One Punch'])
+    //first es el primer valor  = usestate, setfirst es el que se va a
+    //establecer o cambiar para luego ser el first
+
+    //Custom hooks funcion flecha normal, const CH = (pEstrella) =>{}
+    const onAddCategory = (NewCategory) =>{
+
+        if(categories.includes(NewCategory)) return;
+        //si la categoria.propiedad(incluyeNuevoValor) retornarlo;
+        //retornarlo = en newcategory pues
+
+        setCategories([NewCategory, ...categories])
+        //establecerCategoria igual a un array que incluya primero 
+        //el parametro que toma la funcion, ...categoriasYaHechas
+
+    }
+
+    //se returna finalmente de todo ese export, se debe de returnar
+    //como son varios valores, hacerlo en ()
+    //<></> dentro del returno porque son varias etiquetas html
+
+    return(
+        <>
+            <h1>App experto gift</h1>
+            {/* Ahora, OCUPAMOS EXTRAER LOS DATOS GIF DEL
+                API, COMO HACEMOS ESO?
+             */} 
+
+            <AddCategory NewCategory={onAddCategory}/>
+            {/* Funcion exportada de AddCategory */}
+            {/* Visitar  addcategory, onaddcatecory
+            para obtener mas info */}
+
+            {
+                categories.map( (category) =>
+                    
+                 )
+            }
+        </>
+    )
+}

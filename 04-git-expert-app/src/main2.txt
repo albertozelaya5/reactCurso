@@ -1,0 +1,15 @@
+//PRIMERO SE IMPORTAN LAS LIBRERIAS
+import React from 'react'
+import ReactDOM from 'react-dom/client';
+import './styles.css'; // ./ cuando esta en la misma carpeta ../ carpeta afuera
+import { GiftExpertrApp } from './GiftExpertrApp';
+//.//carpeta adentro, nivel mas al fondo, styles no se pone sobreNombre
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode> {/* react modo estricto a prueba de errores */}
+        //Ir al origen del componente para comprender su funcionamiento
+        <GiftExpertrApp/> {/* Se importa el componente como etiqueta html */}
+        {/* Siempre que se use un componente, se debe importar una libreria arriba, y este dentero de su jsx debera ser exportado en su funcion o default*/}
+        {/* Asi con cada componente que se requiera */}
+    </React.StrictMode>
+)

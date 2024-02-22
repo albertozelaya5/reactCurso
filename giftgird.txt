@@ -1,0 +1,19 @@
+export const GiftGrid = ({ category }) => {
+  const gifts = [1, 2, 3, 4, 5];
+
+  return (
+    <> // siempre en el return de un component
+      <h3>{category}</h3> //{funcion js}
+
+        //DENTRO DEL PARAMETRO gifts.map(funcion flecha)
+        //se le asigna dentro del parametro
+        //gifts.map( (gift) => {return;} )
+        //EN EL {return;} ES NECESARIO TERMINAR CON ;
+        //gifts.map( (gift) => (<p>Elemento</p>) )
+
+      {gifts.map((gift) => {
+        return <p>{gift}</p>;
+      })}
+    </p>
+  );
+};

@@ -1,0 +1,3 @@
+api.giphy.com/v1/gifs/search?api_key=lgkWFr29Xw4KCYdZOTNNJSIN1MdlMVCG
+//PONES EL ENLACE DE LA API Y LUEGO ?api_key=mikey
+//EL ?ES PARA AGREGAR UN ARGUMENTO A LA URL
