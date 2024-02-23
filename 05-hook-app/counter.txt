@@ -1,0 +1,28 @@
+Usar el Usestate, el import, el snippet
+const [first, setfirst] = useState(second)
+se define el valor primero que es el first y el 
+que va a modificar al primero, este puede ser normal
+Digase useState(1) o useState({num1: 1, num2: 2,})
+SIEMPRE PONER COMA EN LOS {LISTAS Y ARRAYS}
+ const {num1, num2} = first
+
+TODO ESTO FUERA DEL RETURN, AHI VA PURO HTML
+const [first, setFirst] = CounterApp(); --SIEMPRE AFUERA JS
+return(
+    <>
+        <h1>Contenido html {num1}</h1>
+        <h2>{num2 }</h2>
+
+        <button onclick={ ()=>{useState({ ...first, num1: num1+1, })} }></button>
+
+    </>
+)
+
+TODO DENTRO DE UN rafc OBVIO, HACER CARPETA HOOK PARA 
+UN CUSTOM HOOK
+
+SE PUEDE RETURNAR TANTO VARIABLES, VALORES SOLOS
+FUNCION JS {O VALOFR DE UNA VARIABLE COMO EL USECOUNTER}
+ ARRAYS []
+ Y CUANDO SE USE Y SE IMPORTE PARA DESESTRUCTURARLO
+ PONER return {} = IGUAL AL RETURN DEL HOOK

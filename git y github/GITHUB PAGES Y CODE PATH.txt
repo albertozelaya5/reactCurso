@@ -26,3 +26,7 @@ SI ADEMAS DEL ENLACE DE GITHUB, LE PONES EL QUE ESTA EN Inspeccionar>Script link
 ----EN EL SCRIPT MODULE Y EL LINK STYLESHEET---
 Poner "./" en el src y href, si ya esta el "/", solo el . entonces
 git add ., git commit -m "msj", git push
+
+------SI NO FUNCIONA code . EN LA TERMINAL, IR A vscode---
+Command + shift + p
+install code, enter y cheque
