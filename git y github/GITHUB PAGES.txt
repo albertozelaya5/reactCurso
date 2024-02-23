@@ -1,0 +1,28 @@
+-------PARA SUBIR NUESTRO PROYECTO A GITHUB PAGES-----
+IRSE A NUESTRA GITHUB PROFILE
+IR A SETTINGS, 3 PUNTOS SETTINGS
+IR A "Pages"
+
+----HAY VARIAS FORMAS DE HACERLO----
+
+----FORMA 1----
+yarn build --EN TERMINAL
+CAMBIAR NOMBRE DE CARPETA dist a "docs"
+git add .
+git commit -m "docs creado"
+git push
+-------SI APARECE ERROR Error: failed to push some refs to – How to Fix in Git--
+git pull --rebase origin main
+git push -u origin main 
+clear --PA LIMPIAR TODO TU BASURERO
+-----IR A Pages, y en Branch seleccionar "main"----
+Tambien seleccionar "docs"
+Dar a save
+---ESPERAR 10-15min-----
+RECARGAR PAGINA, SI TODO SALE BIEN SALDRA:
+https://albertozelaya5.github.io/react-gifexpert/
+------VA A DAR ERROR PQ ESTA EN UNA SUBCARPETA------
+SI ADEMAS DEL ENLACE DE GITHUB, LE PONES EL QUE ESTA EN Inspeccionar>Script link, dara acceso al codigo fuente
+----EN EL SCRIPT MODULE Y EL LINK STYLESHEET---
+Poner "./" en el src y href, si ya esta el "/", solo el . entonces
+git add ., git commit -m "msj", git push

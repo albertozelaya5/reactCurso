@@ -15,7 +15,21 @@ HTTPS, copiar codigo y autenticar
 Luego git repo clone userName/repoName
 -----El enlace del repo en Github cli
 
+-----REPO DESDE 0 EN EL TERMINAL, UBICARSE EN CARPETA QUE SE VA A SUBIR----
+git init
+git add .
+git commit -m "mensaje de primer commit"
+---LUEGO IR A GITHUB, INICIAR UN REPOSITORIO, VOLVER A VS CODE Y PONER EN TERMINAL--
+git remote add origin https://github.com/albertozelaya5/react-gifexpert.git
+git branch -M main
+git push -u origin main
+----LUEGO ANADIR UN README.md (OPCIONAL)--
+git add .
+git commit -m "Readme agregado"
+git push --SI ES NECESARIO DAR CREDENCIALES
 
+----------SI BORRASTE TODO POR ERROR-----
+git checkout -- .     <--ES EQUIVALENTE A UN ctrl-z
 
 INSTALAR GIT OBVIO
 -----------------GUIA DE GIT Y GITHUB-----AL BORRAR "" SE MIRAN LOS DATOS PUESTOS----------
