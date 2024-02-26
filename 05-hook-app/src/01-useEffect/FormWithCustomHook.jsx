@@ -2,7 +2,10 @@ import React, { useEffect } from "react";
 import { useForm } from "../hooks/useForm";
 
 export const FormWithCustomHook = () => {
-  const { formState, onImputChange, username, email, password } = useForm({
+  const { formState, onImputChange, onResetForm, username, email, password } = useForm({
+    username: '',
+    email: '',
+    password: '',
   });
 
   //const { username, email, password } = formState;
@@ -27,7 +30,7 @@ export const FormWithCustomHook = () => {
       <input
         type="email"
         className="form-control mt-2"
-        placeholder="Username"
+        placeholder="Email"
         name="email"
         value={email}
         onChange={onImputChange}
@@ -35,11 +38,13 @@ export const FormWithCustomHook = () => {
       <input
         type="password"
         className="form-control mt-2"
-        placeholder="Contrasena"
+        placeholder="Password"
         name="password"
         value={password}
         onChange={onImputChange}
       />
+
+      <button onClick={ onResetForm } className="btn btn-primary mt-2">Borrar</button>
     </>
   );
 };

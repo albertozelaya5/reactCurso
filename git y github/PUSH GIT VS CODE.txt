@@ -2,7 +2,7 @@ npm run dev   ---------PARA EJECUTAR EL PUERTO COMO UN SERVER git help
 --------NODE MODULES npm install--------------
 .gitignore y el gitattributes.txt para que se interprete tipo texto>* text=auto
 
-*.jpg binary
+*.jpg binagitry
 *png binary
 *svg binary
 
@@ -14,6 +14,11 @@ ubicarse en el terminal, gh auth login
 HTTPS, copiar codigo y autenticar
 Luego git repo clone userName/repoName
 -----El enlace del repo en Github cli
+------HACER PULL A LOS AVANCES DE OTRA COMPU---
+git pull origin main
+------SI NO SE ESTA SEGURO DE QUE RAMA ES--
+git branch -a
+-----PARA VER EL NOMBRE EXACTO DE LA RAMA QUE OCUPO ACTUALIZAR Y ASI PONER EL git pull origin ""
 
 -----REPO DESDE 0 EN EL TERMINAL, UBICARSE EN CARPETA QUE SE VA A SUBIR----
 git init
