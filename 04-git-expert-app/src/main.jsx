@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { GiftExpertrApp } from "./GiftExpertrApp";
+//import { GiftExpertrApp } from "./GiftExpertrApp";
 import "./styles.css";
 import { MultipleCustomHooks } from "../../03-examples/MultipleCustomHooks";
 
