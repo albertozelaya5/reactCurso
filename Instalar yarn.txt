@@ -1,8 +1,33 @@
 Instalar yarn
+npm install --global yarn
+yarn --version
 -yarn create vite
 cd app
 yarn
 yarn dev
+
+-----Instalar Tailwind-----
+npm create vite@latest my-project -- --template react
+cd my-project
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+-------index.css----->
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+npm run dev
+
 import PropTypes from 'prop-types';
 yarn add prop-types
 yarn build
