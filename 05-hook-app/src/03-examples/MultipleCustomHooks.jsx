@@ -3,7 +3,7 @@ import { useFetch } from "../hooks"
 
 export const MultipleCustomHooks = (  ) => {
 
-  const { data, hasError, isLoading } = useFetch('https://pokeapi.co/api/v2/pokemon/1');
+  const { data, hasError, isLoading } = useFetch('https://pokeapi.co/api/v2/pokemon/2');
 
   return (
     <>

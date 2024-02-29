@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-import { Message } from '../01-useEffect/Message';
 
 
 export const useFetch = (url) => {
@@ -17,13 +16,23 @@ export const useFetch = (url) => {
 
   }, [url]);
 
-  //setLoadingState = 
+  const setLoadingState = () =>{
+    setState({
+      data: null,
+      isLoading: true,
+      hasError: false,
+      error: null,
+    })
+  }
   
-  const getFetch = async( url ) =>{
-    const resp = await fetch('');
+  const getFetch = async( ) =>{
+
+    setLoadingState();
+    const resp = await fetch(url);
     
     
-    await nwa Promise( resolve => setTimeout(resolve, 1500) );
+    await new Promise( resolve => setTimeout(resolve, 1500) );
+
     if( !resp.ok ){
       setState({
         data: null,
@@ -33,7 +42,6 @@ export const useFetch = (url) => {
           code: resp.status,
           Message: resp.statusText,
         }
-        
       });
       return;
     }
